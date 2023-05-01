@@ -20,10 +20,10 @@ public class CarSort {
             cars[i] = new Car();
         }
         // Print the array of cars (unsorted)
-        // System.out.println("Here are the cars (unsorted):");
-        // for (int i = 0; i < n; i++) {
-        // System.out.println(cars[i]);
-        // }
+        System.out.println("Here are the cars (unsorted):");
+        for (int i = 0; i < n; i++) {
+            System.out.println(cars[i]);
+        }
 
         // Sort the array of cars by mileage
         // Create an array of integers to hold the mileage values
@@ -37,8 +37,8 @@ public class CarSort {
         shuffle(mileage); // this shuffle is redudnant, but it's here for the sake of consistency
 
         // Print the array of integers (unsorted)
-        // System.out.println("\nHere are the mileage values (unsorted):");
-        // System.out.println(showData(mileage));
+        System.out.println("\nHere are the mileage values (unsorted):");
+        System.out.println(showData(mileage));
 
         // Time how long it takes to sort the array using selection sort (O(n^2))
         long startTimeSS = System.nanoTime();
@@ -54,9 +54,8 @@ public class CarSort {
         System.out.println("\nSelection sort took " + (elapsedTimeSS / 1.e6) + " milliseconds. (Data was shuffled.)");
 
         // Print the sorted array of integers
-        // System.out.println("Here are the mileage values (sorted using selection sort
-        // (O(n^2))):");
-        // System.out.println(showData(mileage));
+        System.out.println("Here are the mileage values (sorted using selection sort (O(n^2))):");
+        System.out.println(showData(mileage));
 
         // Shuffle the array, then sort it again using quicksort (O(log2n))
         shuffle(mileage);
@@ -68,9 +67,8 @@ public class CarSort {
         System.out.println("\nQuicksort took " + (elapsedTimeQS / 1.e6) + " milliseconds. (Data was shuffled.)");
 
         // Print the sorted array of integers
-        // System.out.println("Here are the mileage values (sorted using quicksort
-        // (O(log2n))):");
-        // System.out.println(showData(mileage));
+        System.out.println("Here are the mileage values (sorted using quicksort (O(log2n))):");
+        System.out.println(showData(mileage));
 
         shuffle(mileage);
 
